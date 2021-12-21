@@ -42,7 +42,8 @@ Book as a class. <br>
 Title, author, ISBN, yearPublication and publishingHouse as characteristics of the object.
 
 ## Development Process. 
-1. Clone my previous project
+1. Clone my previous project (It was the base of the back-end)
+2. Created my base of the front-end with the command npx create-react-app
 
 ### Libraries 
 1. Express
