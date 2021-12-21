@@ -25,14 +25,14 @@ class BookView extends React.Component{
        
     }
     componentDidMount() {
-        axios.get(`/book/${this.state._id}`)
+        axios.get(`/book/${this.state.id}`)
             .then(response => { 
                 this.setState({
-                    title: response.data._title,
-                    author: response.data._author,
-                    ISBN: response.data._ISBN,
-                    yearPublication: response.data._yearPublication,
-                    publishingHouse: response.data._publishingHouse,
+                    title: response.data.title,
+                    author: response.data.author,
+                    ISBN: response.data.ISBN,
+                    yearPublication: response.data.yearPublication,
+                    publishingHouse: response.data.publishingHouse,
                     isLoaded: true
                 })
 
@@ -46,11 +46,11 @@ class BookView extends React.Component{
 
             return(
                 <div>
-                    <p>Title: {this.state._title}</p>
-                    <p>Author: {this.state._author}</p>
-                    <p>ISBN: {this.state._ISBN}</p>
-                    <p>Year Publication: {this.state._yearPublication}</p>
-                    <p>Publishing House: {this.state._publishingHouse}</p>
+                    <p>Title: {this.state.title}</p>
+                    <p>Author: {this.state.author}</p>
+                    <p>ISBN: {this.state.ISBN}</p>
+                    <p>Year Publication: {this.state.yearPublication}</p>
+                    <p>Publishing House: {this.state.publishingHouse}</p>
                   
                     <br />
                     <button onClick={this.handleDelete}>Delete</button>

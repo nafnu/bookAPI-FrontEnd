@@ -16,9 +16,7 @@ class Books extends React.Component{
 
         axios.get('/book')
             .then((response) => {
-            // handle success when status is 200 and OK
-            // populate the dogs array with the data from the server
-            // set isLoaded to true to make sure we render the right values on screen
+           
                 this.setState( {
                     books: response.data,
                     isLoaded: true
